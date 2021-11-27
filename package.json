@@ -1,0 +1,26 @@
+{
+  "name": "sistema-de-biblioteca",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3insteinDev/Sistema-Para-Biblioteca.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3insteinDev/Sistema-Para-Biblioteca/issues"
+  },
+  "homepage": "https://github.com/3insteinDev/Sistema-Para-Biblioteca#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongodb": "^4.2.0",
+    "mongoose": "^6.0.13",
+    "node-localstorage": "^2.2.1"
+  }
+}

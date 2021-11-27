@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt_BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.88.1">
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+    integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+    async></script>
+  <title>Biblioteca Central</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins';
+      display: block !important;
+      padding: 0 !important
+    }
+
+    main {
+      margin-top: 40px;
+    }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="css/sing-in.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+  <!-- Bootstrap icones -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+  <header>
+    <%- include('partials/headerAluno'); %>
+  </header>
+
+  <main class="text-center text-center container-fluid d-flex justify-content-center">
+    <form action="/reservando" method="post" class="col-4">
+        <i class="bi bi-bookmark-check-fill" style="color: #343A40; font-size: 32px;"></i> <a href="paginaInicial" style="text-decoration: none;"><span style="color: #343A40; font-size: 32px;">Biblioteca Central</span>
+    </a>
+        <h1>Aluguel de Livros</h1>
+    
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="Insira o nome do Livro:" name="titulolivro" value='<%= livro.titulo %>'>
+          <label for="floatingInput">Nome do Livro:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="Insira sua Matrícula" name="autor" value='<%= livro.nomeAutor %>'>
+          <label for="floatingInput">Autor:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="Insira seu curso" name="ano" value='<%= livro.anoPublicacao %>'>
+          <label for="floatingInput">Ano piblicação:</label>
+        </div>
+        <button type='submit' class="w-50 btn btn-lg btn-primary" type="submit">Reservar Livro</button>
+        
+      </form>
+    
+      <div class="col-5">
+        <div class="container">
+          <% alugados.forEach((e) => { %>
+          <div class="col card m-auto shadow-sm mb-3"  style="max-width: 400px;">
+            <div class="card-body">
+              <div>
+                <i class="bi bi-book"></i> <span>Livro: <%= e.alugados.titulo %></span>
+                
+              </div>
+              <div>
+                <i class="bi bi-person"></i> <span>Matrícula: <%= e.matricula %></span>
+                
+              </div>
+              <div>
+                <i class="bi bi-calendar-check"></i> <span>Data da Entrega: <%= e.entrega %></span>
+                
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="btn-group">
+                  <a href='/entregar/<%= e._id %>'><button type="button" class="btn btn-sm btn-outline-secondary">Excluir Reserva</button></a>
+                  <a href='/entregar/<%= e._id %>'><button type="button" class="btn btn-sm btn-outline-success">Entregar</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+  
+</main>
+
+</body>
+
+</html>

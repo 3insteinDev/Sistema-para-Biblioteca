@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+
+<!-- Receberá o head -->
+
+<head>
+  <%- include('partials/head'); %>
+</head>
+
+<!-- Início do Body -->
+
+<body>
+
+
+  <!-- Receberá o Header -->
+  <header>
+    <%- include('partials/headerAluno')%>
+  </header>
+
+
+  <!-- Conteúdo da página -->
+  <main>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/susan-q-yin-2JIvboGLeho-unsplash.jpg">
+          <svg class="bd-placeholder-img img1" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#777" />
+          </svg>
+
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>Alugue seus livros</h1>
+              <p>Acesse a página de Login para alugar seus livros.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/pexels-tima-miroshnichenko-6549365.jpg">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#777" />
+          </svg>
+
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Bibliotecária, Cadastre seus livros.</h1>
+              <p>Um espaço perfeito para gerenciar os livros da sua biblioteca.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/pexels-tima-miroshnichenko-9572573.jpg">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#777" />
+          </svg>
+
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1>A gestão da sua Biblioteca em um só Lugar.</h1>
+              <p>Cadastre seus alunos, livros e tenha um espaço para que eles possam .</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- START THE FEATURETTES -->
+    <div class="container">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Todos as suas reservas de livros. <span class="text-muted">Em um único só
+              lugar.</span></h2>
+          <p class="lead">Clique no ícone de logar e acesse a página de empréstimos.</p>
+        </div>
+        <div class="col-md-5">
+          <img src="img/pexels-sasha-prasastika-9832438.jpg" style="max-width: 500px; height: 500px;">
+          </svg>
+
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">Professores e alunos. <span class="text-muted">Conectados em um só
+              lugar.</span></h2>
+          <p class="lead">A biblioteca central une a experiência de gerenciamento de arquivos à gestão de de reservas em
+            tempo real.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+
+          <img class="img-responsive" src="img/pexels-tima-miroshnichenko-9572562.jpg"
+            style="max-width: 500px; max-height: 500px;">
+
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Teve dúvida? <span class="text-muted">Nosso time de suporte está 24h de
+              prontidão</span></h2>
+          <p class="lead">A equipe técnica da Biblioteca Central está disponível 25h por dia.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="img-responsive" src="img/pexels-mart-production-7709189.jpg"
+            style="max-width:500px; max-height: 500px;">
+        </div>
+      </div>
+
+      <hr class="featurette-divider mb-5">
+
+      <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container-fluid  text-center marketing">
+
+      <h2 class="featurette-heading mt-0 mb-5">Conheça nosso time de <span class="text-muted">suporte rápido.</span>
+      </h2>
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row mb-0 mt-3">
+        <div class="col-lg-3">
+          <img class="img-responsive mb-3" src="img/bruno.jpg" style="width: 140px; height: 140px; border-radius: 50%;">
+          <h2>Bruno Silva</h2>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-3">
+          <img class="img-responsive mb-3" src="img/mateus.jpg"
+            style="width: 140px; height: 140px; border-radius: 50%;">
+          <h2>Mateus Holanda</h2>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-3">
+          <img class="img-responsive mb-3" src="img/eintein.jpg"
+            style="width: 140px; height: 140px; border-radius: 50%;">
+          <h2>Einstein Soares</h2>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-3">
+          <img class="img-responsive mb-3" src="img/djou.jpg" style="width: 140px; height: 140px; border-radius: 50%;">
+          <h2>Dionatam Lima</h2>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+    </div>
+  </main>
+  <!-- Fim do conteúdo da página -->
+
+
+  <!-- receberá o Footer -->
+  <div class="container">
+    <%- include('partials/footer'); %>
+  </div>
+
+
+
+  <!-- Scripts - Bootstrap, JQuery e CloudFlare -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <!-- scripts para Javascript Interno -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/validação.js"></script>
+  <script src="js/search.js"></script>
+</body>
+
+</html>
